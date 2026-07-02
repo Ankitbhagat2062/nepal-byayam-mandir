@@ -401,7 +401,7 @@ export default function page() {
 
             <div className="mt-8">
               {/* Uses pre-configured AboutFaqs array via existing module */}
-              <FAQAccordion page="about" />
+              <FAQAccordion page="contact" />
 
               {/* Ensure the array mapping stays in sync with the directive (no-op reference to enforce intent) */}
               <div className="hidden" aria-hidden="true">

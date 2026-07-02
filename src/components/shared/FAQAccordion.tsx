@@ -9,14 +9,22 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { AboutFaqs, HomeFaqs } from "@/lib/constants";
+import { AboutFaqs, AmenitiesFaqs, ContactFaqs, HomeFaqs, PricingFaqs, ProgramsFaqs } from "@/lib/constants";
 
 export default function FAQAccordion({ page }: { page: string }) {
   let faqs;
   if (page === "home") {
     faqs = HomeFaqs;
+  } else if (page === "about") {
+    faqs = AboutFaqs;
+  } else if (page === "contact") {
+    faqs = ContactFaqs;
+  } else if (page === "pricing") {
+    faqs = PricingFaqs;
+  } else if (page === 'amenities') {
+    faqs = AmenitiesFaqs
   } else {
-    faqs = AboutFaqs; // Default to AboutFaqs if no matching page is found
+    faqs = ProgramsFaqs
   }
   type FaqValue = (typeof faqs)[number]["value"];
   const [openValue, setOpenValue] = React.useState<FaqValue | undefined>(faqs[0].value);

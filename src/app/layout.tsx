@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 import { jsonLd } from "@/lib/constants";
 import Chatbot from "@/components/shared/Chatbot";
 import Navbar from "@/components/shared/Navbar";
@@ -63,6 +64,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Chatbot />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

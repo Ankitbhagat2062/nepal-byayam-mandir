@@ -1,7 +1,15 @@
-import { ActivityIcon, Award, CheckCircle2, CircleHelp, CreditCard, Dumbbell, Heart, HeartPulse, type LucideIcon, MapPin, Scale, Shield, ShieldCheck, Sparkles, Trophy, Users, Waves } from "lucide-react";
-import { Activity } from "react";
+import {
+  ActivityIcon, Award, CheckCircle2, CircleHelp, CreditCard, Dumbbell, Heart, HeartPulse,
+  MapPin, Scale, Shield, ShieldCheck, Sparkles, Trophy, Users, Waves,
+  CalendarDays, Percent, ShieldAlert, KeyRound, HelpCircle,
+  Flame, Sandwich, ShoppingBag, Eye,
+  Activity, Gauge,
+  Phone, UserCheck, Cpu, Landmark,
+} from "lucide-react";
+import { type LucideIcon } from "lucide-react";
 
-
+import Instagram from '@/components/ui/instagram'
+import Facebook from '@/components/ui/facebook'
 export const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ExerciseGym",
@@ -32,6 +40,161 @@ export const jsonLd = {
   ]
 };
 
+export const ContactFaqs = [
+  {
+    value: "exact-location",
+    icon: MapPin,
+    question: "How do I find the gym in Kamaladi?",
+    answer: "We are prominently located at Martyr Dharma Bhakta Mathema Marg, Kamaladi, Kathmandu, Nepal, situated near major corporate commercial centers.",
+  },
+  {
+    value: "phone-inquiries",
+    icon: Phone,
+    question: "Can I register or renew my membership package over the phone?",
+    answer: "You can reach our help hotline daily for inquiries; however, full account generation and physical credential tracking are securely completed at our reception desk.",
+  },
+  {
+    value: "hardware-access",
+    icon: Cpu,
+    question: "How does your automated door checking system work?",
+    answer: "Our member database connects seamlessly via webhooks to the physical gym's automated electronic door lock systems. Active profile verification instantly releases the lock relays when a member checks in.",
+  },
+  {
+    value: "billing-notifications",
+    icon: ShieldAlert,
+    question: "Will I be notified automatically before my subscription expires?",
+    answer: "Yes, our automated CRM tracking system generates proactive billing alerts and expiration notifications via SMS/Email well before your multi-month pass lapses.",
+  },
+  {
+    value: "holiday-schedule",
+    icon: Landmark,
+    question: "Are you open on public holidays and local festivals?",
+    answer: "Schedule revisions or holiday closures are coordinated in advance. Our automated broadcast engine pushes updates for birthdays, public holidays, and national festivals directly to active member profiles.",
+  },
+  {
+    value: "corporate-partnerships",
+    icon: UserCheck,
+    question: "Who do I contact for custom corporate wellness partnerships?",
+    answer: "Corporate representatives can submit an official inquiry through our contact form dropdown, or visit our administration offices directly on-site during operational hours.",
+  },
+] as const;
+
+export const ProgramsFaqs = [
+  {
+    value: "obesity-toning",
+    icon: Scale,
+    question: "Which program is best for weight loss and muscle firming?",
+    answer: "Our Body Shaping & Toning track is a targeted, High-Intensity physical training system specifically engineered to help eliminate obesity and cultivate lean muscle definition.",
+  },
+  {
+    value: "mass-gaining",
+    icon: Gauge,
+    question: "How does the Weight Gaining program ensure I don't just gain fat?",
+    answer: "Our clinical muscle-building protocol applies strict progressive resistance guidelines, enabling individuals to efficiently put on clean muscle mass instead of unwanted body fat.",
+  },
+  {
+    value: "executive-bonus",
+    icon: Activity,
+    question: "What is the Executive Bonus Program?",
+    answer: "This is a flexible, highly adaptive training framework designed specifically for busy corporate executives and homemakers, helping them maintain peak fitness within tight daily routines.",
+  },
+  {
+    value: "athlete-conditioning",
+    icon: Award,
+    question: "Do you provide advanced modules for competitive sports athletes?",
+    answer: "Yes. Our Sports Improvement Performance Program delivers Elite Intensity training parameters structured to maximize power output, explosive endurance, and game-day physical readiness.",
+  },
+  {
+    value: "housewife-aerobics",
+    icon: Sparkles,
+    question: "Are the Aerobics Dance programs suitable for absolute beginners?",
+    answer: "Absolutely. Our Aerobics Dance Exercise tracks mix low and high impact routines, making them highly accessible for homemakers, beginners, and advanced trainees looking for fun, high-energy fat burn.",
+  },
+  {
+    value: "who-philosophy",
+    icon: Heart,
+    question: "What health philosophy guides your fitness programming?",
+    answer: "All programs line up with the World Health Organization's (WHO) official slogan, 'MOVE FOR HEALTH'—aiming to combat physical inactivity, high blood pressure, diabetes, and mental stress.",
+  },
+] as const;
+
+export const AmenitiesFaqs = [
+  {
+    value: "gym-floor-size",
+    icon: Dumbbell,
+    question: "How large is the main training environment?",
+    answer: "The Main Gym features nearly 3,500 square feet of beautifully well-parqueted floor area equipped with premium, state-of-the-art strength lines and heavy iron selections.",
+  },
+  {
+    value: "zumba-kickboxing",
+    icon: Flame,
+    question: "Are the Zumba and Kickboxing classes held in separate studios?",
+    answer: "Yes. We feature completely optimized dedicated zones, including a High-Octane Zumba Dance Studio and a professional Kickboxing Terminal equipped with tactical heavy-bag arrays and protection mats.",
+  },
+  {
+    value: "sauna-steam",
+    icon: Waves,
+    question: "What therapeutic spa facilities do you offer?",
+    answer: "We house clean, premium Sauna and Steam Bath therapeutic suites engineered to assist muscle recovery, eliminate stress, and boost vascular health.",
+  },
+  {
+    value: "nutrition-cafe",
+    icon: Sandwich,
+    question: "Is there an on-site facility for post-workout nutrition?",
+    answer: "Yes, our Post-Workout Cafeteria serves clean, wholesome food, recovery options, and custom nutritional shakes explicitly crafted to boost your training results.",
+  },
+  {
+    value: "health-shoppe",
+    icon: ShoppingBag,
+    question: "Can I buy authentic fitness gear and vitamins at the gym?",
+    answer: "Yes. The Health Shoppe handles verified vitamins and premium supplements, while our Sportswear Corner supplies top-tier athletic apparel right inside the facility.",
+  },
+  {
+    value: "facility-tour",
+    icon: Eye,
+    question: "Can I tour the facility before choosing a membership plan?",
+    answer: "We warmly welcome visitors. Senior coordinators are available daily between 5:00 AM and 9:00 PM to take you through our specialized zones and amenities.",
+  },
+] as const;
+
+export const PricingFaqs = [
+  {
+    value: "billing-cycles",
+    icon: CalendarDays,
+    question: "What billing frequencies are available for memberships?",
+    answer: "All core categories support programmatic selection tiers across four distinct billing frequencies: Monthly, Quarterly (3 Months), Half-Yearly (6 Months), and Yearly/Annual agreements.",
+  },
+  {
+    value: "sauna-rules",
+    icon: ShieldAlert,
+    question: "Are there any restrictions on the Sauna & Steam Bath facilities?",
+    answer: "Yes. To protect client wellness and maximize facility safety, use of the therapeutic suite is strictly capped at a maximum of twice a week per member. We also offer an independent Single Session pass alongside standard tiers.",
+  },
+  {
+    value: "combo-options",
+    icon: Percent,
+    question: "Do you offer bundle packages for multiple services?",
+    answer: "Yes. We offer optimized combo options including the Gym/Cardio Combo and the Zumba/Cardio Combo, alongside our all-inclusive Full Membership Pass which unifies Gym, Cardio, Zumba, Sauna, and Steam Suite access.",
+  },
+  {
+    value: "locker-rentals",
+    icon: KeyRound,
+    question: "Can I rent a personal locker on a long-term basis?",
+    answer: "Absolutely. Secure on-site personal athlete lockers are available to rent matching your billing preference cycles: Monthly, Quarterly, Half-Yearly, or Annually.",
+  },
+  {
+    value: "joining-fees",
+    icon: CreditCard,
+    question: "Are there any hidden costs or registration fees?",
+    answer: "Our rates are completely transparent according to the database package structure selected. There are no hidden overhead modifications to your active subscription fee tracking.",
+  },
+  {
+    value: "membership-transfer",
+    icon: HelpCircle,
+    question: "Can I freeze or transfer my long-term membership plan?",
+    answer: "Multi-month contract accounts (Quarterly, Half-Yearly, and Annual) can request status freezes or transfers through our front-desk CRM management system before the contract expiration block hits.",
+  },
+] as const;
 export const AboutFaqs = [
   {
     value: "hours",
@@ -69,7 +232,7 @@ export const AboutFaqs = [
     question: "I’m new—do I get trainer orientation?",
     answer: 'Yes, we provide orientation sessions for all new members to help them get started.',
   },
-];
+] as const;
 
 export const HomeFaqs = [
   {
@@ -115,6 +278,7 @@ export const HomeFaqs = [
       "Yes. Each membership includes trainer orientation and guidance so you can start safely and train effectively from day one.",
   },
 ] as const;
+
 export const navLinks = [
   { name: "About Heritage", href: "/about" },
   { name: "Amenities", href: "/amenities" },
@@ -226,3 +390,18 @@ export const intensityToBadge: Record<Exclude<Intensity, "All">, string> = {
   Elite: "Elite Intensity",
   "Dynamic / Multi-Intensity": "Dynamic / Multi-Intensity",
 };
+
+export const socialLinks = [
+  {
+    href: 'https://www.facebook.com/nbmnepal/',
+    label: 'Facebook Profile',
+    subLabel: 'facebook.com/nbmnepal',
+    icon: Facebook,
+  },
+  {
+    href: 'https://www.instagram.com/explore/locations/462002793873781/nepal-byayam-mandir/?hl=en',
+    label: 'Instagram Profile',
+    subLabel: 'instagram.com/nbmnepal',
+    icon: Instagram,
+  },
+]

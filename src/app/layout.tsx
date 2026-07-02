@@ -6,6 +6,7 @@ import Script from "next/script";
 import { jsonLd } from "@/lib/constants";
 import Chatbot from "@/components/shared/Chatbot";
 import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,6 +61,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           {children}
+          <Footer />
           <Chatbot />
         </ThemeProvider>
       </body>

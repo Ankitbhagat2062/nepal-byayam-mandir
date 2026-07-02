@@ -14,6 +14,7 @@ export default function ProgramsGrid({
     if (active === "High Intensity") return programs.filter((p) => p.intensity === "High Intensity");
     if (active === "Adaptive") return programs.filter((p) => p.intensity === "Adaptive");
     if (active === "Elite") return programs.filter((p) => p.intensity === "Elite");
+    if (active === "Dynamic / Multi-Intensity") return programs.filter((p) => p.intensity === "Dynamic / Multi-Intensity");
     return programs;
   })();
 

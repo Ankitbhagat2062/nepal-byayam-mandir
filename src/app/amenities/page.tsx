@@ -1,6 +1,7 @@
 import Amenities from '@/components/shared/Amenities'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import Pricing from '@/components/shared/Pricing'
+import { baseOpenGraph } from '@/lib/constants';
 import { Metadata } from 'next';
 import { Suspense } from 'react'
 
@@ -29,10 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description:
         "Premium multi-track health spaces designed for conditioning, mindful recovery, and sustainable movement aligned with WHO MOVE FOR HEALTH.",
       url: "https://www.nepalbyayammandir.com/amenities",
-      siteName: "Nepal Byayam Mandir",
-      images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
-      locale: "en_US",
-      type: "website",
+       ...baseOpenGraph,
     },
   };
 }

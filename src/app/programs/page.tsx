@@ -1,6 +1,7 @@
 import ProgramsSectionClient from "@/components/programs/ProgramsSectionClient";
 import React from "react";
 import type { Metadata } from "next";
+import { baseOpenGraph } from "@/lib/constants";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -34,10 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description:
         "Explore specialized training programs at Nepal Byayam Mandir—discipline, health restoration, and bodybuilding excellence in Nepal.",
       url: "https://www.nepalbyayammandir.com/programs",
-      siteName: "Nepal Byayam Mandir",
-      images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
-      locale: "en_US",
-      type: "website",
+       ...baseOpenGraph,
     },
   };
 }

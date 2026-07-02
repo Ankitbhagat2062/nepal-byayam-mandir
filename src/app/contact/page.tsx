@@ -4,6 +4,7 @@ import Script from "next/script";
 
 import FAQAccordion from "@/components/shared/FAQAccordion";
 import ContactForm from "./ContactForm";
+import { baseOpenGraph } from "@/lib/constants";
 
 const GOLD = "#C5A059";
 const CANVAS = "#FDFCF9";
@@ -42,10 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description:
         "Reach Nepal Byayam Mandir in Kamaladi, Kathmandu. Training programs, operational hours, and interactive location.",
       url: "https://www.nepalbyayammandir.com/contact",
-      siteName: "Nepal Byayam Mandir",
-      images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
-      locale: "en_US",
-      type: "website",
+       ...baseOpenGraph,
     },
   };
 }
@@ -61,7 +59,7 @@ const pageJsonLd = {
   "@id": "https://www.nepalbyayammandir.com/contact/#localbusiness",
   name: "Nepal Byayam Mandir",
   description: "Contact & location details for Nepal Byayam Mandir.",
-  url: "https://www.nepalbyayammandir.com",
+  url: "https://www.nepalbyayammandir.com/contact",
   telephone: TELEPHONE,
   address: {
     "@type": "PostalAddress",

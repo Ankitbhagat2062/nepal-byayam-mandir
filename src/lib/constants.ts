@@ -39,7 +39,12 @@ export const jsonLd = {
     "https://www.instagram.com/explore/locations/462002793873781/nepal-byayam-mandir/?hl=en"
   ]
 };
-
+export const baseOpenGraph = {
+  siteName: "Nepal Byayam Mandir",
+  images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
+  locale: "en_US",
+  type: "website",
+};
 export const ContactFaqs = [
   {
     value: "exact-location",

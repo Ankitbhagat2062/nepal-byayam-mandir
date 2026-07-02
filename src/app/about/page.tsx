@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { RevealRoot } from "@/components/about/about";
 import ProgramFeatures from "@/components/about/programFeatures";
-import { programFeatures } from "@/lib/constants";
+import { baseOpenGraph, programFeatures } from "@/lib/constants";
 import FAQAccordion from "@/components/shared/FAQAccordion";
 
 function SocialGlyph({ kind }: { kind: "facebook" | "instagram" }) {
@@ -63,10 +63,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description:
         "Established in 1953 A.D. (2010 B.S.). Explore our championship lineage and WHO-aligned movement philosophy.",
       url: "https://www.nepalbyayammandir.com/about",
-      siteName: "Nepal Byayam Mandir",
-      images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
-      locale: "en_US",
-      type: "website",
+      ... baseOpenGraph,
     },
   };
 }

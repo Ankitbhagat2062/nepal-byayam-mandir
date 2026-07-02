@@ -1,5 +1,6 @@
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import Pricing from '@/components/shared/Pricing'
+import { baseOpenGraph } from '@/lib/constants';
 import { Metadata } from 'next';
 import { Suspense } from 'react'
 
@@ -34,10 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description:
         "Transparent membership rates for gym, cardio deck, zumba studio access, and sauna/steam sessions. Select monthly, quarterly, half-yearly, or annual plans.",
       url: "https://www.nepalbyayammandir.com/pricing",
-      siteName: "Nepal Byayam Mandir",
-      images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
-      locale: "en_US",
-      type: "website",
+       ...baseOpenGraph,
     },
   };
 }

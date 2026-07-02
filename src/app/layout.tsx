@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = 'https://www.nepalbyayammandir.com';
   return {
     title: 'Nepal Byayam Mandir | Pioneer Gym & Fitness Center Kathmandu',
     description: 'Established in 1953 A.D. Home of the prestigious Dharma Shree Bodybuilding Championship. Offering premium personal training, cardio, zumba, and yoga.',
@@ -45,8 +46,9 @@ export async function generateMetadata(): Promise<Metadata> {
       'memberships',
       'fitness programs'
     ],
+    metadataBase: new URL(baseUrl),
     alternates: {
-      canonical: 'https://www.nepalbyayammandir.com', // Crucial: Prevents duplicate URL crawling penalties
+      canonical: baseUrl, // Prevents duplicate URL crawling penalties
     },
     openGraph: {
       title: 'Nepal Byayam Mandir | Pioneer Gym & Fitness Center',

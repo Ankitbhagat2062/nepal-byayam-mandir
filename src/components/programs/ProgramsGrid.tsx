@@ -1,7 +1,6 @@
 'use client';
 
 import { Intensity, intensityToBadge, programs } from "@/lib/constants";
-import React from "react";
 import { useReducedMotionSafe } from "./motionSafe";
 
 export default function ProgramsGrid({
@@ -10,13 +9,13 @@ export default function ProgramsGrid({
   active: Intensity;
 }) {
   const reducedMotion = useReducedMotionSafe();
-  const filtered = React.useMemo(() => {
+  const filtered = (() => {
     if (active === "All") return programs;
     if (active === "High Intensity") return programs.filter((p) => p.intensity === "High Intensity");
     if (active === "Adaptive") return programs.filter((p) => p.intensity === "Adaptive");
     if (active === "Elite") return programs.filter((p) => p.intensity === "Elite");
     return programs;
-  }, [active]);
+  })();
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">

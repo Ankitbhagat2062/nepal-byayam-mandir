@@ -3,7 +3,6 @@ import { Dumbbell, MapPin } from "lucide-react";
 import Script from "next/script";
 
 import FAQAccordion from "@/components/shared/FAQAccordion";
-import { AboutFaqs } from "@/lib/constants";
 import ContactForm from "./ContactForm";
 
 const GOLD = "#C5A059";
@@ -62,23 +61,6 @@ const pageJsonLd = {
     },
   ],
 };
-
-type ProgramInterest =
-  | "body-shaping"
-  | "weight-gaining"
-  | "executive-program"
-  | "zumba"
-  | "kickboxing"
-  | "yoga";
-
-const programOptions: Array<{ value: ProgramInterest; label: string }> = [
-  { value: "body-shaping", label: "Body Shaping" },
-  { value: "weight-gaining", label: "Weight Gaining" },
-  { value: "executive-program", label: "Executive Program" },
-  { value: "zumba", label: "Zumba" },
-  { value: "kickboxing", label: "Kickboxing" },
-  { value: "yoga", label: "Yoga" },
-];
 
 export default function page() {
   return (
@@ -400,13 +382,8 @@ export default function page() {
             </div>
 
             <div className="mt-8">
-              {/* Uses pre-configured AboutFaqs array via existing module */}
               <FAQAccordion page="contact" />
 
-              {/* Ensure the array mapping stays in sync with the directive (no-op reference to enforce intent) */}
-              <div className="hidden" aria-hidden="true">
-                {AboutFaqs.map(() => null)}
-              </div>
             </div>
 
             {/* Decorative: luxury thin divider */}

@@ -1,6 +1,16 @@
+'use client'
 import { Dumbbell, MapPin, ShieldCheck } from 'lucide-react'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { socialLinks } from '@/lib/constants'
 
 const Footer = () => {
+    const [year, setYear] = useState<number | null>(null)
+
+    useEffect(() => {
+        setYear(new Date().getFullYear())
+    }, [])
+
     return (
         <footer className="bg-card border-t border-border/60 py-12 relative z-10 text-xs text-muted-foreground">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -18,7 +28,7 @@ const Footer = () => {
                         Nepal Byayam Mandir is the official pioneer gymnasium of bodybuilding sports in Nepal. Established in
                         1953 A.D. (2010 B.S.).
                     </p>
-                    <p className="text-[10px]">&copy; {new Date().getFullYear()} Nepal Byayam Mandir. All rights reserved.</p>
+                    <p className="text-[10px]">&copy; {year ?? new Date().getFullYear()} Nepal Byayam Mandir. All rights reserved.</p>
                 </div>
 
                 <div className="space-y-3">
@@ -56,58 +66,27 @@ const Footer = () => {
                     <h4 className="font-bold text-foreground uppercase tracking-widest text-[10px]">VERIFIED SOCIAL REGISTRIES</h4>
                     <p className="leading-normal mb-2">Connect with our official institutional identity registries:</p>
                     <div className="flex flex-col gap-2">
-                        <a
-                            href="https://www.facebook.com/nbmnepal/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 p-2.5 rounded-lg border border-border hover:border-primary/40 hover:bg-background transition-colors text-foreground"
-                        >
-                            <svg
-                                className="w-4 h-4 text-primary shrink-0 animate-pulse"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
+                        {socialLinks.map((social, index) => (
+                            <Link
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                key={index}
+                                className="flex items-center gap-2 p-2.5 rounded-lg border border-border hover:border-primary/40 hover:bg-background transition-colors text-foreground"
                             >
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                            </svg>
-                            <div className="flex flex-col leading-none">
-                                <span className="font-bold text-[10px]">Facebook Profile</span>
-                                <span className="text-[8px] text-muted-foreground">facebook.com/nbmnepal</span>
-                            </div>
-                        </a>
-                        <a
-                            href="https://www.instagram.com/explore/locations/462002793873781/nepal-byayam-mandir/?hl=en"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 p-2.5 rounded-lg border border-border hover:border-primary/40 hover:bg-background transition-colors text-foreground"
-                        >
-                            <svg
-                                className="w-4 h-4 text-primary shrink-0 animate-pulse"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                            </svg>
-                            <div className="flex flex-col leading-none">
-                                <span className="font-bold text-[10px]">Instagram Registry</span>
-                                <span className="text-[8px] text-muted-foreground">instagram.com/nbmnepal</span>
-                            </div>
-                        </a>
+                                <social.icon className="w-4 h-4 text-primary shrink-0" />
+                                <div className="flex flex-col leading-none">
+                                    <span className="font-bold text-[10px]">{social.label}</span>
+                                    <span className="text-[8px] text-muted-foreground">{social.subLabel}</span>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
-
             </div>
         </footer>
     )
 }
 
 export default Footer
+

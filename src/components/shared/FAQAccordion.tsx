@@ -10,8 +10,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { AboutFaqs, AmenitiesFaqs, ContactFaqs, HomeFaqs, PricingFaqs, ProgramsFaqs } from "@/lib/constants";
-
-export default function FAQAccordion({ page }: { page: string }) {
+type FaqPage = "home" | "about" | "contact" | "pricing" | "amenities" | "programs";
+export default function FAQAccordion({ page }: { page: FaqPage }) {
   let faqs;
   if (page === "home") {
     faqs = HomeFaqs;

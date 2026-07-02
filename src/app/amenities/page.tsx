@@ -1,8 +1,39 @@
 import Amenities from '@/components/shared/Amenities'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import Pricing from '@/components/shared/Pricing'
+import { baseOpenGraph } from '@/lib/constants';
+import { Metadata } from 'next';
 import { Suspense } from 'react'
 
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Amenities | Nepal Byayam Mandir | Training & Recovery Spaces",
+    description:
+      "Explore Nepal Byayam Mandir’s premium amenities—multi-track training zones, senior-comfort accessibility, and WHO MOVE FOR HEALTH aligned recovery spaces.",
+    keywords: [
+      "Nepal Byayam Mandir",
+      "amenities",
+      "training",
+      "recovery",
+      "gym",
+      "fitness",
+      "WHO MOVE FOR HEALTH",
+      "senior-friendly",
+      "bodybuilding",
+      "wellness"
+    ],
+    alternates: {
+      canonical: "https://www.nepalbyayammandir.com/amenities",
+    },
+    openGraph: {
+      title: "Amenities at Nepal Byayam Mandir",
+      description:
+        "Premium multi-track health spaces designed for conditioning, mindful recovery, and sustainable movement aligned with WHO MOVE FOR HEALTH.",
+      url: "https://www.nepalbyayammandir.com/amenities",
+       ...baseOpenGraph,
+    },
+  };
+}
 
 const page = () => {
   return (

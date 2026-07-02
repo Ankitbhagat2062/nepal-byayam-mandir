@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 import { jsonLd } from "@/lib/constants";
 import Chatbot from "@/components/shared/Chatbot";
 import Navbar from "@/components/shared/Navbar";
@@ -18,11 +19,36 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = 'https://www.nepalbyayammandir.com';
   return {
     title: 'Nepal Byayam Mandir | Pioneer Gym & Fitness Center Kathmandu',
     description: 'Established in 1953 A.D. Home of the prestigious Dharma Shree Bodybuilding Championship. Offering premium personal training, cardio, zumba, and yoga.',
+    keywords: [
+      'Nepal Byayam Mandir',
+      'Nepal Byayam Mandir gym',
+      'pioneer gym',
+      'fitness center',
+      'Kathmandu',
+      'Kamaladi',
+      'gym',
+      'bodybuilding',
+      'Dharma Shree Bodybuilding Championship',
+      'personal training',
+      'cardio',
+      'zumba',
+      'yoga',
+      'strength training',
+      'weight gain',
+      'aerobics',
+      'kickboxing',
+      'sauna',
+      'steam bath',
+      'memberships',
+      'fitness programs'
+    ],
+    metadataBase: new URL(baseUrl),
     alternates: {
-      canonical: 'https://www.nepalbyayammandir.com', // Crucial: Prevents duplicate URL crawling penalties
+      canonical: baseUrl, // Prevents duplicate URL crawling penalties
     },
     openGraph: {
       title: 'Nepal Byayam Mandir | Pioneer Gym & Fitness Center',
@@ -63,6 +89,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Chatbot />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

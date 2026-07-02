@@ -15,9 +15,9 @@ export const jsonLd = {
   "@type": "ExerciseGym",
   "@id": "https://www.nepalbyayammandir.com/#gym",
   "name": "Nepal Byayam Mandir",
-  "image": "https://www.nepalbyayammandir.com.np/og-premium-banner.jpg",
+  "image": "https://www.nepalbyayammandir.com/og-premium-banner.jpg",
   "description": "Nepal Byayam Mandir is the official pioneer gymnasium of Bodybuilding Sports in Nepal, established in 1953 A.D.",
-  "url": "https://www.nepalbyayammandir.com.np",
+  "url": "https://www.nepalbyayammandir.com",
   "telephone": "+977-1-XXXXXXX",
   "address": {
     "@type": "PostalAddress",
@@ -39,7 +39,12 @@ export const jsonLd = {
     "https://www.instagram.com/explore/locations/462002793873781/nepal-byayam-mandir/?hl=en"
   ]
 };
-
+export const baseOpenGraph = {
+  siteName: "Nepal Byayam Mandir",
+  images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
+  locale: "en_US",
+  type: "website",
+};
 export const ContactFaqs = [
   {
     value: "exact-location",

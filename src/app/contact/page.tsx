@@ -4,6 +4,7 @@ import Script from "next/script";
 
 import FAQAccordion from "@/components/shared/FAQAccordion";
 import ContactForm from "./ContactForm";
+import { baseOpenGraph } from "@/lib/constants";
 
 const GOLD = "#C5A059";
 const CANVAS = "#FDFCF9";
@@ -15,18 +16,34 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Contact & Location | Nepal Byayam Mandir",
     description:
       "Contact Nepal Byayam Mandir in Kamaladi, Kathmandu. Call our hotline or send a VIP inquiry for training programs.",
+    keywords: [
+      "Nepal Byayam Mandir",
+      "contact",
+      "location",
+      "Kamaladi",
+      "Kathmandu",
+      "gym contact",
+      "gym in Kathmandu",
+      "pioneer gym",
+      "fitness center",
+      "bodybuilding",
+      "personal training",
+      "zumba",
+      "yoga",
+      "cardio",
+      "memberships",
+      "hotline",
+      "directions"
+    ],
     alternates: {
-      canonical: "https://www.nepalbyayammandir.com.np/contact",
+      canonical: "https://www.nepalbyayammandir.com/contact",
     },
     openGraph: {
       title: "Contact & Location | Nepal Byayam Mandir",
       description:
         "Reach Nepal Byayam Mandir in Kamaladi, Kathmandu. Training programs, operational hours, and interactive location.",
-      url: "https://www.nepalbyayammandir.com.np/contact",
-      siteName: "Nepal Byayam Mandir",
-      images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
-      locale: "en_US",
-      type: "website",
+      url: "https://www.nepalbyayammandir.com/contact",
+       ...baseOpenGraph,
     },
   };
 }
@@ -39,10 +56,10 @@ const TELEPHONE = "+977-1-XXXXXXX";
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.nepalbyayammandir.com.np/contact/#localbusiness",
+  "@id": "https://www.nepalbyayammandir.com/contact/#localbusiness",
   name: "Nepal Byayam Mandir",
   description: "Contact & location details for Nepal Byayam Mandir.",
-  url: "https://www.nepalbyayammandir.com.np",
+  url: "https://www.nepalbyayammandir.com/contact",
   telephone: TELEPHONE,
   address: {
     "@type": "PostalAddress",

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "@/context/ThemeContext";
 import { Sun, Moon, Menu, X, Dumbbell, ShieldAlert } from "lucide-react";
+import { navLinks } from "@/lib/constants";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -20,13 +21,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const navLinks = [
-    { name: "About Heritage", href: "/about" },
-    { name: "Amenities", href: "/amenities" },
-    { name: "Programs", href: "/programs" },
-    { name: "Rates Schema", href: "/pricing" },
-  ];
 
   return (
     <header

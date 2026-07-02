@@ -36,37 +36,37 @@ export const AboutFaqs = [
     value: "hours",
     icon: ShieldCheck,
     question: "What are your operational hours?",
-    answer:'We are open from 5:00 AM to 9:00 PM, Monday through Saturday.',
+    answer: 'We are open from 5:00 AM to 9:00 PM, Monday through Saturday.',
   },
   {
     value: "membership",
     icon: CreditCard,
     question: "Do you offer monthly, quarterly, and yearly memberships?",
-    answer:'Yes, we offer flexible membership options to suit your needs.',
+    answer: 'Yes, we offer flexible membership options to suit your needs.',
   },
   {
     value: "programs",
     icon: Dumbbell,
     question: "Which training programs do you have?",
-    answer:'We offer a variety of training programs including strength training, cardio, and group classes.',
+    answer: 'We offer a variety of training programs including strength training, cardio, and group classes.',
   },
   {
     value: "amenities",
     icon: Waves,
     question: "Is sauna & steam bath included in every plan?",
-    answer:'Yes, our sauna and steam bath facilities are available to all members.',
+    answer: 'Yes, our sauna and steam bath facilities are available to all members.',
   },
   {
     value: "location",
     icon: MapPin,
     question: "Where are you located?",
-    answer:'We are located at Martyr Dharma Bhakta Mathema Marg, Kamaladi, Kathmandu, Nepal.',
+    answer: 'We are located at Martyr Dharma Bhakta Mathema Marg, Kamaladi, Kathmandu, Nepal.',
   },
   {
     value: "newcomers",
     icon: CircleHelp,
     question: "I’m new—do I get trainer orientation?",
-    answer:'Yes, we provide orientation sessions for all new members to help them get started.',
+    answer: 'Yes, we provide orientation sessions for all new members to help them get started.',
   },
 ];
 
@@ -114,7 +114,13 @@ export const HomeFaqs = [
       "Yes. Each membership includes trainer orientation and guidance so you can start safely and train effectively from day one.",
   },
 ] as const;
-
+export const navLinks = [
+  { name: "About Heritage", href: "/about" },
+  { name: "Amenities", href: "/amenities" },
+  { name: "Programs", href: "/programs" },
+  { name: "Rates Schema", href: "/pricing" },
+  { name: "Contact", href: "/contact" },
+];
 
 export const programFeatures = [
   {

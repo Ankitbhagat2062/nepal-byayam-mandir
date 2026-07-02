@@ -1,4 +1,5 @@
-import { Award, CheckCircle2, CircleHelp, CreditCard, Dumbbell, HeartPulse, MapPin, Scale, ShieldCheck, Users, Waves } from "lucide-react";
+import { ActivityIcon, Award, CheckCircle2, CircleHelp, CreditCard, Dumbbell, Heart, HeartPulse, type LucideIcon, MapPin, Scale, Shield, ShieldCheck, Sparkles, Trophy, Users, Waves } from "lucide-react";
+import { Activity } from "react";
 
 
 export const jsonLd = {
@@ -160,3 +161,68 @@ export const programFeatures = [
     icon: HeartPulse,
   },
 ] as const;
+
+
+export const programs: {
+  id: string;
+  title: string;
+  intensity: Intensity;
+  icon: LucideIcon;
+  deepCopy: string;
+}[] = [
+    {
+      id: "body-shaping-toning",
+      title: "Body Shaping & Toning",
+      intensity: "High Intensity" as const,
+      icon: ActivityIcon,
+      deepCopy:
+        "Formulated as a targeted, data-backed physical training system engineered explicitly to help eliminate obesity, sculpt definitions, and lean down body mass index ratios.",
+    },
+    {
+      id: "weight-gaining",
+      title: "Weight Gaining",
+      intensity: "High Intensity" as const,
+      icon: Sparkles,
+      deepCopy:
+        "A strategic, muscle-density program enabling individuals to efficiently accumulate high-quality muscle mass instead of unwanted fat cells, driving healthy, sustainable weight management.",
+    },
+    {
+      id: "strength-improvement",
+      title: "Strength Improvement",
+      intensity: "High Intensity" as const,
+      icon: Shield,
+      deepCopy:
+        "Advanced resistance parameters structured entirely to enhance raw physical power output, structural core conditioning, and heavy compound iron activities.",
+    },
+    {
+      id: "executive-bonus",
+      title: "Executive Bonus Program",
+      intensity: "Adaptive" as const,
+      icon: Trophy,
+      deepCopy:
+        "Flexible, highly adaptive training modules designed specifically for busy corporate executives and housewives to assist them in keeping exceptionally fit within constrained daily schedules.",
+    },
+    {
+      id: "sports-improvement",
+      title: "Sports Improvement Performance Program",
+      intensity: "Elite" as const,
+      icon: Dumbbell,
+      deepCopy:
+        "High-performance athletic parameters engineered to assist competitive sports athletes in maximizing metabolic conditioning, explosive power, and tactical output.",
+    },
+    {
+      id: "aerobics-dance",
+      title: "Aerobics Dance Exercise Programs",
+      intensity: "Dynamic / Multi-Intensity" as const,
+      icon: Heart,
+      deepCopy:
+        "Tailored aerobics track designed for housewives, beginners, and advanced trainees looking for fast fat burn-off, muscle toning, and structural firming via mixed low and high impact routines.",
+    },
+  ];
+export type Intensity = "All" | "High Intensity" | "Adaptive" | "Elite" | "Dynamic / Multi-Intensity";
+export const intensityToBadge: Record<Exclude<Intensity, "All">, string> = {
+  "High Intensity": "High Intensity",
+  Adaptive: "Adaptive Intensity",
+  Elite: "Elite Intensity",
+  "Dynamic / Multi-Intensity": "Dynamic / Multi-Intensity",
+};

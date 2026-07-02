@@ -1,14 +1,13 @@
-import Programs from '@/components/shared/Programs'
-import React from 'react'
+import ProgramsSectionClient from "@/components/programs/ProgramsSectionClient";
+import React from "react";
 
-const page = () => {
+export default function Page() {
   return (
-        <section id="programs" aria-label="Programs">
-          <React.Suspense fallback={null}>
-            <Programs />
-          </React.Suspense>
-        </section>
-  )
+    <section id="programs" aria-label="Programs">
+      <React.Suspense fallback={null}>
+        <ProgramsSectionClient />
+      </React.Suspense>
+    </section>
+  );
 }
 
-export default page

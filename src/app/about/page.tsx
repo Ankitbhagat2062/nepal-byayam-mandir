@@ -38,14 +38,31 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "About Nepal Byayam Mandir | Pioneer Gym & Dharma Shree Legacy",
     description:
       "Nepal Byayam Mandir is the official pioneer gymnasium of Bodybuilding Sports in Nepal, established in 2010 B.S. (1953 A.D.). Home of the Dharma Shree National Open Bodybuilding Championship.",
+    keywords: [
+      "Nepal Byayam Mandir",
+      "pioneer gym",
+      "bodybuilding gym in Nepal",
+      "bodybuilding sports Nepal",
+      "Dharma Shree National Open",
+      "Dharma Shree Championship",
+      "national open bodybuilding",
+      "health club Nepal",
+      "WHO MOVE FOR HEALTH",
+      "physical inactivity",
+      "high blood pressure",
+      "diabetes",
+      "stress relief",
+      "gyms in Kathmandu",
+      "Nepal bodybuilding legacy",
+    ],
     alternates: {
-      canonical: "https://www.nepalbyayammandir.com.np/about",
+      canonical: "https://www.nepalbyayammandir.com/about",
     },
     openGraph: {
       title: "About Nepal Byayam Mandir",
       description:
         "Established in 1953 A.D. (2010 B.S.). Explore our championship lineage and WHO-aligned movement philosophy.",
-      url: "https://www.nepalbyayammandir.com.np/about",
+      url: "https://www.nepalbyayammandir.com/about",
       siteName: "Nepal Byayam Mandir",
       images: [{ url: "/og-premium-banner.jpg", width: 1200, height: 630 }],
       locale: "en_US",
@@ -57,11 +74,11 @@ export async function generateMetadata(): Promise<Metadata> {
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.nepalbyayammandir.com.np/about/#localbusiness",
+  "@id": "https://www.nepalbyayammandir.com/about/#localbusiness",
   name: "Nepal Byayam Mandir",
   description:
     "Nepal Byayam Mandir is the official pioneer gymnasium of Bodybuilding Sports in Nepal, established in 2010 B.S. (1953 A.D.).",
-  url: "https://www.nepalbyayammandir.com.np/about",
+  url: "https://www.nepalbyayammandir.com/about",
   foundingDate: "1953-01-01",
   sameAs: [
     "https://www.facebook.com/nbmnepal/",

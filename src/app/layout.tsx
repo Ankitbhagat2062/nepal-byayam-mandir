@@ -22,6 +22,29 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Nepal Byayam Mandir | Pioneer Gym & Fitness Center Kathmandu',
     description: 'Established in 1953 A.D. Home of the prestigious Dharma Shree Bodybuilding Championship. Offering premium personal training, cardio, zumba, and yoga.',
+    keywords: [
+      'Nepal Byayam Mandir',
+      'Nepal Byayam Mandir gym',
+      'pioneer gym',
+      'fitness center',
+      'Kathmandu',
+      'Kamaladi',
+      'gym',
+      'bodybuilding',
+      'Dharma Shree Bodybuilding Championship',
+      'personal training',
+      'cardio',
+      'zumba',
+      'yoga',
+      'strength training',
+      'weight gain',
+      'aerobics',
+      'kickboxing',
+      'sauna',
+      'steam bath',
+      'memberships',
+      'fitness programs'
+    ],
     alternates: {
       canonical: 'https://www.nepalbyayammandir.com', // Crucial: Prevents duplicate URL crawling penalties
     },

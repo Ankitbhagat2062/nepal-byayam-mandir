@@ -15,9 +15,9 @@ export const jsonLd = {
   "@type": "ExerciseGym",
   "@id": "https://www.nepalbyayammandir.com/#gym",
   "name": "Nepal Byayam Mandir",
-  "image": "https://www.nepalbyayammandir.com.np/og-premium-banner.jpg",
+  "image": "https://www.nepalbyayammandir.com/og-premium-banner.jpg",
   "description": "Nepal Byayam Mandir is the official pioneer gymnasium of Bodybuilding Sports in Nepal, established in 1953 A.D.",
-  "url": "https://www.nepalbyayammandir.com.np",
+  "url": "https://www.nepalbyayammandir.com",
   "telephone": "+977-1-XXXXXXX",
   "address": {
     "@type": "PostalAddress",

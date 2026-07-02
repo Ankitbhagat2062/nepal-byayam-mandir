@@ -1,0 +1,27 @@
+# Nepal Byayam Mandir — Web Development Rules
+
+## 1. Core Visual Directives (Strict Light Mode Default)
+- **Anti-Dark Mode Bias:** You must completely avoid defaulting to dark interfaces or black canvas styles. The theme is strictly an Elite Luxury Light Gallery designed for senior leadership accessibility.
+- **Color Variables (Tailwind CSS Tokens):**
+  - Canvas Base: `bg-[#FDFCF9]` (Warm Creamy Alabaster White)
+  - Card Containers: `bg-[#F9F6F0]` (Stonewashed Premium Linen)
+  - Text Layer: `text-[#111111]` (Deep Obsidian Charcoal) — Must ensure ultra-sharp contrast borders.
+  - Accent Controls: `border-[#C5A059]` or `text-[#C5A059]` (Burnished Premium Metallic Gold).
+- **Dark Mode Support:** Implement a functional manual `dark:` variant mapping exclusively to `#0B0B0A` with ivory text elements, triggered only via explicit user action toggle.
+
+## 2. Technical Stack Boundaries
+- **Framework:** Next.js 15+ (App Router architecture using `app/` structure).
+- **State Optimization:** Leverage the React Compiler. Do not use manual performance boilerplate (`useMemo`, `useCallback`) unless dealing with complex canvas calculations.
+- **Media Optimization:** Every single asset rendering must leverage `next/image` or `next/link`. Raw elements like `<img>` or `<a>` are strictly banned to maintain core web vitals.
+- **3D Boundaries:** Isolate heavy 3D transforms, mouse-tracking perspective calculations, or Three.js dependencies behind structural React `<Suspense>` boundaries.
+
+## 3. Mandatory Context Data & SEO Requirements
+- **Institutional Identity:** Every page generation must align with the historical text schema: Established in 2010 B.S. (1953 A.D.), pioneer of Nepalese bodybuilding, organizer of the prestigious "Dharma Shree" bodybuilding tournament since 2042 B.S. (1985 A.D.).
+- **Social Integrity Anchors:** The platform must hardcode authentic backlinks to:
+  - Facebook: https://www.facebook.com/nbmnepal/
+  - Instagram: https://www.instagram.com/explore/locations/462002793873781/nepal-byayam-mandir/?hl=en
+- **SEO Engines:** Always embed semantic schema metadata objects (JSON-LD ExerciseGym format) directly inside page server views.
+
+## 4. Operational Instructions
+- Do not emit placeholder logic code blocks (`// TODO: implement later`). 
+- Write complete, unredacted, copy-and-pasteable TypeScript blocks.
